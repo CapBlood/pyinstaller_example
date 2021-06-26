@@ -1,0 +1,7 @@
+dist
+build
+venv
+*.spec
+__pycache__
+.DS_Store
+.idea
