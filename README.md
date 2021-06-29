@@ -4,7 +4,7 @@
 
 Далее для непосредственной сборки (на примере данного проекта) можно использовать следующую команду:
 `sudo pyinstaller --add-data "pyinstaller_example/example.txt:." --windowed --noconfirm --clean -n Example  pyinstaller_example/__main__.py`.
-Флаг `--add-data` добавляет файлы как ресурсы в pyinstaller (`source:dest`), для их дальнейшего нахождения уже в собранном
+Флаг `--add-data` добавляет небинарные файлы (для бинарных есть `-add-binary`) как ресурсы в pyinstaller (`source:dest`), для их дальнейшего нахождения уже в собранном
 виде можно использовать следующую функцию (relative_path - относительный путь к ресурсу, такой же как и `dest`):
 ```
 def resource_path(relative_path):
@@ -18,7 +18,8 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 ```
 Флаг `-n` задает имя для собираемой программы. Флаг `--windowed` означает создание в случае
-macOS пакета программы формата `.app`.
+macOS пакета программы формата `.app`. Другие примеры можно посмотреть
+[здесь](https://pyinstaller.readthedocs.io/en/stable/usage.html#shortening-the-command).
 
 Также можно сначала создать spec-файл: `pyi-makespec name.py`. Затем уже в созданном
 spec-файле изменить все нужные вам параметры. Далее для сборки уже необходимо использовать
