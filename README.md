@@ -47,3 +47,5 @@ pyinstall_run([
 - https://pythonru.com/biblioteki/pyinstaller
 - https://realpython.com/pyinstaller-python/
 - https://pyinstaller.readthedocs.io/en/stable/usage.html 
+- https://stackoverflow.com/questions/6028000/how-to-read-a-static-file-from-inside-a-python-package/58941536#58941536
+- https://stackoverflow.com/questions/779495/access-data-in-package-subdirectory
